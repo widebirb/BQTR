@@ -52,6 +52,7 @@ namespace api.Controllers
         }
 
         // PUT api/todo/0
+        [HttpPut("{id}")]
         public ActionResult Update(int id, [FromBody] string todo)
         {
             if (id < 0 || id >= _todos.Count)
